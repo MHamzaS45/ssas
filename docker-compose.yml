@@ -1,0 +1,26 @@
+############
+# STRUCTURE
+############
+# Define how container is ran with all config in a single place. Declarative description when running
+
+# build: . tells Docker Compose to build the image from the Dockerfile in the current directory.
+# ports: "8000:8000" maps port 8000 on your machine to port 8000 inside the container.
+# restart: unless-stopped - automatically restarts the container if it crashes, unless you explicitly stop it.
+# healthcheck pings the /health endpoint every 30 seconds to confirm the API is responsive.
+
+services:
+ ssas:
+  build: .
+  container_name: ssas-api
+  ports: 
+  - "8000:8000"
+  environment:
+  - ENVIRONMENT=production
+  restart: unless-stopped
+  healthcheck:
+   test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/health')"]
+   interval: 30s
+   timeout: 10s
+   retries: 3
+
+# Create the docker image and start the container with 'docker compose up --build' 
