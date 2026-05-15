@@ -1,6 +1,7 @@
-# Spatial Analytics API with FastAPI
+# Spatial Analytics API with FastAPI ()
 
-
+# Remaining features
+- Addition of more complex animations in the heatmap 
 
 
 
@@ -22,11 +23,11 @@ Well this project might just be for you!
 This project is a guard patrol coverage analyzer, which is built with FastAPI, NumPy, and Docker. It works as a spatial-temporal analytics system that processes guard patrol routes, computes surveillance coverage across a facility grid, and visualizes risk zones on an interactive map.
 
 
-## Standing Up the Development Environment
+
 
 ### Project structure and dependencies
 
-We will begin by creating the project directory, and setting up the virtual environment and install all dependencies. We will then verify the setup by running a minimal FastAPI health check  endpoint.
+- Necessary libraries listed in requirements.txt
 
 content = """# SSAS Project Directory Structure
 
