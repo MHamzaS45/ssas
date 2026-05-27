@@ -2,7 +2,7 @@
 
 # Remaining features
 - Addition of more complex animations in the heatmap 
-
+- Heatseeking improvement 
 
 
 ## Project Vision: Building a Surveillance Analytics System
